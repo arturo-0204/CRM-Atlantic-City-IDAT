@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Atlantic City | Iniciar sesi&oacute;n
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="auth-page">
+  <main class="auth-wrapper">
+   <section class="auth-card">
+    <div class="brand-mark">
+     ATLANTIC
+     <span>
+      CITY
+     </span>
+    </div>
+    <p class="auth-subtitle">
+     Sistema de Gesti&oacute;n de Clientes
+    </p>
+    <h1>
+     Bienvenido
+    </h1>
+    <p class="muted">
+     Ingresa a tu cuenta para administrar tus servicios.
+    </p>
+    <form id="loginForm">
+     <div class="mb-3">
+      <label class="form-label" for="loginEmail">
+       Correo electr&oacute;nico
+      </label>
+      <input class="form-control" id="loginEmail" placeholder="correo@ejemplo.com" required="" type="email"/>
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="loginPassword">
+       Contrase&ntilde;a
+      </label>
+      <div class="password-field">
+       <input class="form-control" id="loginPassword" placeholder="Tu contrase&ntilde;a" required="" type="password" autocomplete="current-password"/>
+       <button class="password-toggle" type="button" data-toggle-password="loginPassword" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button>
+      </div>
+     </div>
+     <button class="btn btn-gold w-100" type="submit">
+      Iniciar sesi&oacute;n
+     </button>
+    </form>
+    <div class="auth-links">
+     <a href="recuperar.html">
+      &iquest;Olvidaste tu contrase&ntilde;a?
+     </a>
+     <span>
+      &iquest;No tienes cuenta?
+      <a href="registro.html">
+       Reg&iacute;strate
+      </a>
+     </span>
+    </div>
+    <div class="demo-note">
+     <strong>
+      Acceso de demostraci&oacute;n
+     </strong>
+     <p class="mb-1">
+      Cliente: ana@example.test / Demo2026!Local
+     </p>
+     <p class="mb-0">
+      Administrador: admin@example.test / Demo2026!Local
+     </p>
+    </div>
+   </section>
+  </main>
+  <script src="js/common.js">
+  </script>
+  <script src="js/auth.js">
+  </script>
+ <div class="text-center small p-2">Demostración académica de servicios culturales y recreativos ficticios. Sin apuestas, pagos reales ni datos personales reales.</div>
+</body>
+</html>
+

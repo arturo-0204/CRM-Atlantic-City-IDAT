@@ -1,0 +1,995 @@
+/* =========================================
+   ATLANTIC CITY - ESTILOS GENERALES
+   ========================================= */
+
+:root {
+    --navy: #07172d;
+    --navy-light: #102744;
+    --navy-soft: #142f4d;
+    --gold: #d6ad58;
+    --gold-light: #f0d28e;
+    --white: #ffffff;
+    --muted: #9aabc0;
+    --border: rgba(255, 255, 255, 0.10);
+    --surface: #0d2038;
+    --danger: #e47777;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--navy);
+    color: var(--white);
+}
+
+a {
+    color: var(--gold-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* =========================================
+   BOTONES Y FORMULARIOS
+   ========================================= */
+
+.btn-gold {
+    background: var(--gold);
+    color: #111b29;
+    border: 1px solid var(--gold);
+    border-radius: 9px;
+    font-weight: 700;
+    padding: 11px 18px;
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    color: #111b29;
+}
+
+.btn-outline-gold {
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+    border-radius: 9px;
+    padding: 10px 16px;
+}
+
+.btn-outline-gold:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.form-control,
+.form-select {
+    background: #091a30;
+    color: var(--white);
+    border: 1px solid #29415d;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #091a30;
+    color: var(--white);
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(214, 173, 88, 0.15);
+}
+
+.form-control::placeholder {
+    color: #71849b;
+}
+
+.form-select option {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.form-label {
+    color: #dce5ef;
+    font-weight: 600;
+}
+
+/* =========================================
+   LOGO Y AUTENTICACIÓN
+   ========================================= */
+
+.brand-mark {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.brand-mark span {
+    color: var(--gold);
+}
+
+.auth-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(214, 173, 88, 0.12), transparent 30%),
+        linear-gradient(135deg, #061326, #102b49);
+}
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(10, 29, 51, 0.96);
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card h1 {
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.auth-subtitle {
+    color: var(--gold);
+    margin: 5px 0 0;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.demo-note {
+    margin-top: 25px;
+    padding: 13px;
+    border-radius: 9px;
+    background: rgba(214, 173, 88, 0.09);
+    color: #c7d2df;
+    font-size: 12px;
+}
+
+/* =========================================
+   ESTRUCTURA DEL PANEL
+   ========================================= */
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 255px;
+    min-width: 255px;
+    min-height: 100vh;
+    padding: 25px 17px;
+    display: flex;
+    flex-direction: column;
+    background: #061326;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-brand {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 21px;
+}
+
+.sidebar-caption {
+    color: #72859d;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin: 10px 8px 28px;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.side-nav .nav-link {
+    color: #b8c5d4;
+    padding: 12px 13px;
+    border-radius: 9px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.side-nav .nav-link:hover,
+.side-nav .nav-link.active {
+    color: var(--gold-light);
+    background: rgba(214, 173, 88, 0.13);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.user-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-mini strong,
+.user-mini small {
+    display: block;
+}
+
+.user-mini strong {
+    font-size: 13px;
+}
+
+.user-mini small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.main-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.topbar {
+    min-height: 85px;
+    padding: 16px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a1c32;
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar-label {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.topbar h2 {
+    font-size: 20px;
+    margin: 3px 0 0;
+}
+
+.topbar-user {
+    color: #c8d3df;
+    font-size: 13px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #64c78a;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    font-size: 25px;
+}
+
+.content-area {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px 34px;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.25s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   INICIO Y TARJETAS
+   ========================================= */
+
+.welcome-banner {
+    min-height: 245px;
+    padding: 34px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(214, 173, 88, 0.25);
+    border-radius: 17px;
+    background: linear-gradient(110deg, #102b49, #173a5c 65%, #6e542a);
+}
+
+.welcome-banner > div:first-child {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.welcome-banner h1 {
+    font-size: clamp(27px, 4vw, 39px);
+    font-weight: 750;
+}
+
+.welcome-banner p:not(.eyebrow) {
+    color: #d0d9e3;
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.banner-decoration {
+    position: absolute;
+    right: 55px;
+    color: rgba(240, 210, 142, 0.13);
+    font-size: 160px;
+    font-weight: 900;
+    letter-spacing: -15px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-heading h3,
+.panel-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-heading p,
+.panel-card > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.stat-card,
+.panel-card {
+    height: 100%;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface);
+}
+
+.stat-icon {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.stat-card p {
+    margin: 13px 0 5px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.stat-card h3 {
+    font-size: 23px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.stat-card small {
+    color: #8295aa;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 20px;
+}
+
+.quick-action {
+    min-height: 135px;
+    padding: 17px;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #102944;
+    color: var(--white);
+}
+
+.quick-action:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.quick-action span,
+.quick-action strong,
+.quick-action small {
+    display: block;
+}
+
+.quick-action span {
+    color: var(--gold);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.quick-action strong {
+    font-size: 14px;
+}
+
+.quick-action small {
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+/* =========================================
+   MEMBRESÍAS Y PROMOCIONES
+   ========================================= */
+
+.current-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.current-plan h3 {
+    margin: 7px 0;
+}
+
+.current-plan p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.plan-status,
+.status-pill {
+    padding: 7px 12px;
+    border-radius: 30px;
+    color: var(--gold-light);
+    background: rgba(214, 173, 88, 0.13);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.membership-card {
+    height: 100%;
+    padding: 25px;
+    border: 1px solid rgba(214, 173, 88, 0.3);
+    border-radius: 15px;
+    background: linear-gradient(145deg, #102944, #0a1c32);
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-card.featured {
+    border-color: var(--gold);
+    box-shadow: 0 0 25px rgba(214, 173, 88, 0.09);
+}
+
+.membership-card h3 {
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.membership-price {
+    color: var(--gold-light);
+    font-size: 30px;
+    font-weight: 800;
+    margin: 13px 0;
+}
+
+.membership-price small {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.membership-card ul {
+    padding-left: 18px;
+    color: #c3cfdd;
+    font-size: 13px;
+    line-height: 2;
+    flex: 1;
+}
+
+.membership-card .btn {
+    margin-top: 15px;
+}
+
+.promo-card {
+    min-height: 210px;
+    padding: 27px;
+    border-radius: 14px;
+    background: linear-gradient(130deg, #163a5c, #0d2038);
+    border: 1px solid var(--border);
+}
+
+.promo-card-alt {
+    background: linear-gradient(130deg, #594522, #172b43);
+}
+
+.promo-tag {
+    color: var(--gold-light);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.promo-card h3 {
+    margin-top: 22px;
+    font-size: 22px;
+}
+
+.promo-card p {
+    color: #c1ccda;
+    max-width: 450px;
+}
+
+/* =========================================
+   SOPORTE Y TABLAS
+   ========================================= */
+
+.support-info {
+    height: 100%;
+    min-height: 300px;
+    padding: 28px;
+    border: 1px solid rgba(214, 173, 88, 0.25);
+    border-radius: 14px;
+    background: linear-gradient(145deg, #173a5c, #0b1d33);
+}
+
+.support-icon {
+    color: var(--gold);
+    font-size: 34px;
+}
+
+.support-info h3 {
+    margin: 18px 0 10px;
+}
+
+.support-info p,
+.support-info small {
+    color: #c0ccda;
+    line-height: 1.7;
+}
+
+.support-detail {
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.table {
+    color: #dbe4ee;
+    --bs-table-bg: transparent;
+    --bs-table-color: #dbe4ee;
+    --bs-table-border-color: var(--border);
+}
+
+.table thead th {
+    color: var(--gold-light);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.table td {
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.table .form-select {
+    min-width: 120px;
+    padding: 7px;
+    font-size: 12px;
+}
+
+.empty-state {
+    padding: 20px 5px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 650px;
+}
+
+.page-footer {
+    padding: 35px 0 10px;
+    color: #72859b;
+    text-align: center;
+    font-size: 12px;
+}
+
+.modal-dark {
+    color: var(--white);
+    background: #0d2038;
+    border: 1px solid var(--border);
+}
+
+.modal-dark .modal-header,
+.modal-dark .modal-footer {
+    border-color: var(--border);
+}
+
+.toast-message {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+    max-width: 340px;
+    padding: 13px 18px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    background: #102944;
+    color: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: 0.25s ease;
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: fixed;
+        z-index: 1000;
+        left: -270px;
+        top: 0;
+        transition: left 0.25s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .topbar {
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .topbar-user {
+        margin-left: auto;
+    }
+
+    .content-area {
+        padding: 22px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-card {
+        padding: 27px 22px;
+    }
+
+    .content-area {
+        padding: 18px 14px;
+    }
+
+    .topbar {
+        padding: 14px;
+    }
+
+    .topbar-user {
+        display: none;
+    }
+
+    .welcome-banner {
+        padding: 24px;
+    }
+
+    .banner-decoration {
+        right: 5px;
+        font-size: 100px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .current-plan {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   MEJORAS CRM ATLANTIC CITY - ADMINISTRACIÓN Y SOPORTE
+   ========================================================= */
+
+.support-response {
+    padding: 12px 14px;
+    border-left: 3px solid var(--gold);
+    border-radius: 7px;
+    background: rgba(214, 173, 88, 0.08);
+}
+
+.support-response strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gold-light);
+    font-size: 12px;
+}
+
+.support-response p {
+    color: #dce5ef;
+    font-size: 13px;
+    white-space: pre-wrap;
+}
+
+.ticket-response {
+    min-width: 190px;
+    min-height: 62px;
+    font-size: 12px;
+}
+
+#section-configuracion .panel-card {
+    margin-bottom: 22px;
+}
+
+#section-configuracion .form-label {
+    margin-bottom: 7px;
+}
+
+#section-configuracion textarea {
+    min-height: 105px;
+}
+
+#adminPlansTable td,
+#adminPromotionsTable td {
+    min-width: 110px;
+}
+
+#adminPlansTable td:last-child,
+#adminPromotionsTable td:last-child {
+    min-width: 170px;
+    white-space: nowrap;
+}
+
+#adminMembershipNotice {
+    border-color: rgba(214, 173, 88, 0.35);
+}
+
+#adminMembershipNotice p {
+    line-height: 1.7;
+}
+
+#membershipCards .membership-card {
+    min-height: 100%;
+}
+
+#membershipCards .membership-card button {
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    #section-configuracion .section-heading {
+        display: block;
+    }
+
+    #adminPlansTable,
+    #adminPromotionsTable {
+        min-width: 650px;
+    }
+
+    #allTickets {
+        min-width: 950px;
+    }
+}
+
+
+/* =========================================
+   MEJORAS: CONTRASEÑAS, PROMOCIONES Y ROLES
+   ========================================= */
+
+.password-field {
+    position: relative;
+}
+
+.password-field .form-control {
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: var(--gold-light);
+    font-size: 19px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.password-toggle:hover {
+    color: var(--white);
+}
+
+.promo-interactive {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.promo-interactive:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .24);
+}
+
+.promo-live,
+.promo-meta {
+    color: var(--gold-light);
+    font-size: 12px;
+}
+
+.promo-code {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: fit-content;
+    margin-top: 8px;
+    padding: 9px 13px;
+    border: 1px dashed var(--gold);
+    border-radius: 9px;
+    background: rgba(214, 173, 88, .08);
+}
+
+.promo-code small {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.promo-code strong {
+    color: var(--gold-light);
+    letter-spacing: 1px;
+}
+
+.promo-details {
+    margin-top: 12px;
+    color: #dce5ef;
+    font-size: 13px;
+}
+
+.promo-details summary {
+    color: var(--gold-light);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.promo-details p {
+    margin: 9px 0 0;
+    white-space: pre-line;
+}
+
+.promo-expired {
+    opacity: .68;
+}
+
+.role-pill {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.role-admin {
+    color: #f4d58e;
+    background: rgba(214, 173, 88, .16);
+}
+
+.role-client {
+    color: #b9d8f4;
+    background: rgba(75, 145, 205, .16);
+}
+
+.request-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 120px;
+}
+
+.request-stat small,
+.request-stat span {
+    color: var(--muted);
+}
+
+.request-stat strong {
+    color: var(--gold-light);
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.requests-table-card h4 {
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media (max-width: 576px) {
+    .password-toggle {
+        right: 8px;
+    }
+
+    .requests-table-card {
+        padding: 16px;
+    }
+}

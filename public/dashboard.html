@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Atlantic City | Panel de gesti&oacute;n
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="dashboard-page">
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+    <a class="brand-mark sidebar-brand" href="dashboard.html">
+     ATLANTIC
+     <span>
+      CITY
+     </span>
+    </a>
+    <p class="sidebar-caption">
+     CRM ACADÉMICO · SERVICIOS CULTURALES FICTICIOS
+    </p>
+    <nav class="side-nav">
+     <a class="nav-link active" data-section="inicio" href="#">
+      ⌂
+      <span>
+       Inicio
+      </span>
+     </a>
+
+<a class="nav-link" data-section="visitas" href="#">◷ <span>Visitas recreativas</span></a>
+<a class="nav-link admin-only" data-section="segmentos" href="#">◉ <span>Segmentación</span></a>
+<a class="nav-link admin-only" data-section="avisos" href="#">✉ <span>Avisos de servicio</span></a>
+<a class="nav-link" data-section="notificaciones" href="#">♧ <span>Notificaciones</span></a>
+     <a class="nav-link" data-section="membresias" href="#">
+      ◇
+      <span>
+       <span id="membershipNavLabel">Mis membres&iacute;as</span>
+      </span>
+     </a>
+     <a class="nav-link" data-section="promociones" href="#">
+      &star;
+      <span>
+       Promociones
+      </span>
+     </a>
+     <a class="nav-link" data-section="historial" href="#">
+      ▤
+      <span>
+       Historial
+      </span>
+     </a>
+     <a class="nav-link" data-section="soporte" href="#">
+      ✉
+      <span>
+       Atenci&oacute;n al cliente
+      </span>
+     </a>
+     <a class="nav-link admin-only" data-section="clientes" href="#">
+      ♙
+      <span>
+       Clientes
+      </span>
+     </a>
+     <a class="nav-link admin-only" data-section="configuracion" href="#">
+      ⚙
+      <span>
+       Planes y promociones
+      </span>
+     </a>
+     <a class="nav-link admin-only" data-section="solicitudes" href="#">
+      ☷
+      <span>
+       Solicitudes
+      </span>
+     </a>
+     <a class="nav-link admin-only" data-section="reportes" href="#">
+      ▥
+      <span>
+       Reportes
+      </span>
+     </a>
+     <a class="nav-link admin-only" data-section="auditoria" href="#">
+      ▤
+      <span>
+       Registro de actividad
+      </span>
+     </a>
+     <a class="nav-link" data-section="perfil" href="#">
+      ⚙
+      <span>
+       Mi perfil
+      </span>
+     </a>
+    </nav>
+    <div class="sidebar-bottom">
+     <div class="user-mini">
+      <div class="avatar" id="sidebarAvatar">
+       AC
+      </div>
+      <div>
+       <strong id="sidebarName">
+        Usuario
+       </strong>
+       <small id="sidebarRole">
+        Cliente
+       </small>
+      </div>
+     </div>
+     <button class="btn btn-outline-light btn-sm w-100 mt-3" id="logoutButton">
+      Cerrar sesi&oacute;n
+     </button>
+    </div>
+   </aside>
+   <main class="main-content">
+    <header class="topbar">
+     <button aria-label="Abrir men&uacute;" class="menu-toggle" id="menuToggle">
+      ☰
+     </button>
+     <div>
+      <span class="topbar-label">
+       ATLANTIC CITY
+      </span>
+      <h2 id="pageTitle">
+       Inicio
+      </h2>
+     </div>
+     <div class="topbar-user">
+      <span class="status-dot">
+      </span>
+      <span id="topbarName">
+       Usuario
+      </span>
+     </div>
+    </header>
+    <div class="content-area">
+     <section class="content-section active" id="section-inicio">
+      <div class="welcome-banner">
+       <div>
+        <p class="eyebrow">
+         TU EXPERIENCIA, M&Aacute;S CERCA
+        </p>
+        <h1>
+         &iexcl;Bienvenido,
+         <span id="welcomeName">
+          cliente
+         </span>
+         !
+        </h1>
+        <p>
+         Administra tus membres&iacute;as, revisa tus beneficios y recibe atenci&oacute;n personalizada.
+        </p>
+        <button class="btn btn-gold" data-go="membresias">
+         Conocer membres&iacute;as
+        </button>
+       </div>
+       <div class="banner-decoration">
+        AC
+       </div>
+      </div>
+      <div class="section-heading">
+       <div>
+        <h3>
+         Resumen de tu cuenta
+        </h3>
+        <p>
+         Informaci&oacute;n principal de tu actividad.
+        </p>
+       </div>
+      </div>
+      <div class="row g-3 mb-4">
+       <div class="col-md-4">
+        <article class="stat-card">
+         <span class="stat-icon">
+          ◇
+         </span>
+         <p>
+          Membres&iacute;a actual
+         </p>
+         <h3 id="homeMembership">
+          Sin membres&iacute;a
+         </h3>
+         <small id="homeMembershipStatus">
+          Explora nuestros planes
+         </small>
+        </article>
+       </div>
+       <div class="col-md-4">
+        <article class="stat-card">
+         <span class="stat-icon">
+          ▤
+         </span>
+         <p>
+          Movimientos registrados
+         </p>
+         <h3 id="homeMovements">
+          0
+         </h3>
+         <small>
+          Compras y solicitudes
+         </small>
+        </article>
+       </div>
+       <div class="col-md-4">
+        <article class="stat-card">
+         <span class="stat-icon">
+          ✉
+         </span>
+         <p>
+          Solicitudes de soporte
+         </p>
+         <h3 id="homeTickets">
+          0
+         </h3>
+         <small>
+          Consultas enviadas
+         </small>
+        </article>
+       </div>
+      </div>
+      <div class="panel-card">
+       <div class="section-heading">
+        <div>
+         <h3>
+          Accesos r&aacute;pidos
+         </h3>
+         <p>
+          Realiza tus gestiones desde aqu&iacute;.
+         </p>
+        </div>
+       </div>
+       <div class="quick-actions">
+        <button class="quick-action" data-go="membresias">
+         <span>
+          ◇
+         </span>
+         <strong>
+          Administrar membres&iacute;a
+         </strong>
+         <small>
+          Comprar, cambiar o cancelar
+         </small>
+        </button>
+        <button class="quick-action" data-go="historial">
+         <span>
+          ▤
+         </span>
+         <strong>
+          Ver historial
+         </strong>
+         <small>
+          Consulta tus movimientos
+         </small>
+        </button>
+        <button class="quick-action" data-go="soporte">
+         <span>
+          ✉
+         </span>
+         <strong>
+          Contactar soporte
+         </strong>
+         <small>
+          Estamos para ayudarte
+         </small>
+        </button>
+       </div>
+      </div>
+     </section>
+     <section class="content-section" id="section-membresias">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Planes de membres&iacute;a
+        </h3>
+        <p>
+         Conoce los beneficios y elige el plan que mejor se adapte a ti.
+        </p>
+       </div>
+      </div>
+      <div class="current-plan panel-card mb-4">
+       <div>
+        <span class="eyebrow">
+         TU PLAN ACTUAL
+        </span>
+        <h3 id="currentPlanName">
+         Todav&iacute;a no tienes una membres&iacute;a
+        </h3>
+        <p id="currentPlanInfo">
+         Selecciona uno de nuestros planes para comenzar.
+        </p>
+       </div>
+       <span class="plan-status" id="currentPlanStatus">
+        Sin plan
+       </span>
+      </div>
+      <div class="row g-4" id="membershipCards">
+      </div>
+      <div class="panel-card mt-4 client-only" id="clientMembershipActions">
+       <h3>
+        Gestionar mi membres&iacute;a
+       </h3>
+       <p class="muted">
+        Estas acciones est&aacute;n disponibles &uacute;nicamente para clientes.
+       </p>
+       <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-gold" id="changePlanButton">
+         Cambiar de plan
+        </button>
+        <button class="btn btn-outline-danger" id="cancelPlanButton">
+         Cancelar membres&iacute;a
+        </button>
+       </div>
+      </div>
+      <div class="panel-card mt-4 admin-only" id="adminMembershipNotice">
+       <button class="btn btn-gold mb-3" data-go="configuracion">Administrar planes de membresía</button>
+       <h3>
+        Vista administrativa
+       </h3>
+       <p class="muted">
+        Puedes consultar los planes publicados y modificar sus caracter&iacute;sticas desde &ldquo;Planes y promociones&rdquo;. Las compras, cambios y cancelaciones pertenecen exclusivamente a los clientes.
+       </p>
+      </div>
+     </section>
+     <section class="content-section" id="section-promociones">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Promociones y beneficios
+        </h3>
+        <p>
+         Descubre las novedades disponibles para nuestros clientes.
+        </p>
+       </div>
+      </div>
+      <div class="row g-3" id="promotionsDisplay">
+      </div>
+     </section>
+     <section class="content-section" id="section-historial">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Mi historial
+        </h3>
+        <p>
+         Revisa las operaciones realizadas desde tu cuenta.
+        </p>
+       </div>
+      </div>
+      <div class="panel-card table-responsive">
+       <table class="table align-middle">
+        <thead>
+         <tr>
+          <th>
+           Fecha
+          </th>
+          <th>
+           Movimiento
+          </th>
+          <th>
+           Detalle
+          </th>
+          <th>
+           Estado
+          </th>
+         </tr>
+        </thead>
+        <tbody id="historyTable">
+        </tbody>
+       </table>
+      </div>
+     </section>
+     <section class="content-section" id="section-soporte">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Atenci&oacute;n al cliente
+        </h3>
+        <p>
+         Env&iacute;anos tus consultas, reclamos o sugerencias.
+        </p>
+       </div>
+      </div>
+      <div class="row g-4">
+       <div class="col-lg-7">
+        <div class="panel-card">
+         <h3>
+          Enviar una solicitud
+         </h3>
+         <form id="supportForm">
+          <div class="mb-3">
+           <label class="form-label" for="supportSubject">
+            Asunto
+           </label>
+           <select class="form-select" id="supportSubject" required="">
+            <option value="">
+             Selecciona el motivo
+            </option>
+            <option>
+             Consulta sobre membres&iacute;a
+            </option>
+            <option>
+             Problema con un pago
+            </option>
+            <option>
+             Solicitud de cambio
+            </option>
+            <option>
+             Reclamo
+            </option>
+            <option>
+             Sugerencia
+            </option>
+            <option>
+             Otro motivo
+            </option>
+           </select>
+          </div>
+          <div class="mb-3">
+           <label class="form-label" for="supportMessage">
+            Mensaje
+           </label>
+           <textarea class="form-control" id="supportMessage" placeholder="Escribe aqu&iacute; tu consulta..." required="" rows="5"></textarea>
+          </div>
+          <button class="btn btn-gold" type="submit">
+           Enviar solicitud
+          </button>
+         </form>
+        </div>
+       </div>
+       <div class="col-lg-5">
+        <div class="support-info">
+         <span class="support-icon">
+          ✉
+         </span>
+         <h3>
+          Estamos para ayudarte
+         </h3>
+         <p>
+          Nuestro equipo de atenci&oacute;n puede orientarte sobre tu cuenta, membres&iacute;a y solicitudes.
+         </p>
+         <div class="support-detail">
+          <strong>
+           Canal:
+          </strong>
+          Formulario de atenci&oacute;n
+         </div>
+         <div class="support-detail">
+          <strong>
+           Seguimiento:
+          </strong>
+          Desde tu panel de solicitudes
+         </div>
+         <small>
+          Las solicitudes se registran en el sistema para su seguimiento.
+         </small>
+        </div>
+       </div>
+      </div>
+      <div class="panel-card mt-4">
+       <h3>
+        Mis solicitudes
+       </h3>
+       <div id="myTickets">
+       </div>
+      </div>
+     </section>
+     
+<section class="content-section" id="section-visitas"><div class="section-heading"><h3>Historial de visitas recreativas</h3></div><div class="panel-card admin-only"><form id="visitDemo" class="row g-3"><div class="col-md-4"><label for="visitUser">Cliente</label><select class="form-select" id="visitUser" required></select></div><div class="col-md-4"><label for="visitDay">Fecha</label><input class="form-control" id="visitDay" type="date" required></div><div class="col-md-4"><label for="visitKind">Actividad</label><select class="form-select" id="visitKind"><option>Exposición cultural</option><option>Concierto</option><option>Taller artístico</option></select></div><div class="col-12"><button class="btn btn-gold">Registrar visita</button></div></form></div><div class="panel-card mt-3 table-responsive"><table class="table"><thead><tr><th>Fecha</th><th>Cliente</th><th>Actividad</th></tr></thead><tbody id="visitRows"></tbody></table></div></section>
+<section class="content-section" id="section-segmentos"><div class="section-heading"><h3>Segmentación de asistencia cultural</h3></div><div class="panel-card"><label for="segFilter">Filtrar asistencia</label><select id="segFilter" class="form-select mb-3"><option value="">Todos</option><option>Sin visitas</option><option>Ocasional</option><option>Frecuente</option></select><div class="table-responsive"><table class="table"><thead><tr><th>Cliente</th><th>Visitas</th><th>Actividad habitual</th><th>Segmento</th></tr></thead><tbody id="segRows"></tbody></table></div></div></section>
+<section class="content-section" id="section-avisos"><div class="section-heading"><h3>Avisos informativos de servicio</h3></div><div class="panel-card"><form id="noticeForm" class="row g-3"><div class="col-md-6"><label for="noticeUser">Destinatario</label><select id="noticeUser" class="form-select" required></select></div><div class="col-md-6"><label for="noticeKind">Aviso</label><select id="noticeKind" class="form-select"><option>Horario de atención actualizado</option><option>Información de accesibilidad disponible</option><option>Mantenimiento del portal</option></select></div><div class="col-12"><button class="btn btn-gold">Enviar aviso</button></div></form><hr><p>Generar avisos de solicitudes resueltas sin duplicarlos.</p><button class="btn btn-outline-gold" id="autoNotice">Ejecutar comprobación</button><p id="autoResult" role="status"></p></div></section>
+<section class="content-section" id="section-notificaciones"><div class="section-heading"><h3>Notificaciones</h3></div><div class="panel-card" id="noticeRows"></div></section>
+<section class="content-section" id="section-clientes">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Gesti&oacute;n de clientes
+        </h3>
+        <p>
+         Listado de clientes y administradores registrados en la demostraci&oacute;n.
+        </p>
+       </div>
+      </div>
+      <div class="panel-card">
+       <div class="mb-3">
+        <label class="form-label" for="clientSearch">
+         Buscar cliente
+        </label>
+        <input class="form-control" id="clientSearch" placeholder="Buscar por nombre, correo, tel&eacute;fono o membres&iacute;a..." type="search"/>
+       </div>
+       <div class="table-responsive">
+        <table class="table align-middle">
+         <thead>
+          <tr>
+           <th>
+            Usuario / ID
+           </th>
+           <th>
+            Correo
+           </th>
+           <th>
+            Tel&eacute;fono
+           </th>
+           <th>
+            Membres&iacute;a
+           </th>
+           <th>Rol</th>
+           <th>Administrar acceso</th>
+          </tr>
+         </thead>
+         <tbody id="clientsTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="content-section" id="section-configuracion">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Administraci&oacute;n de planes y promociones
+        </h3>
+        <p>
+         Modifica precios, beneficios, descripciones y promociones. No permite comprar ni cancelar membres&iacute;as.
+        </p>
+       </div>
+      </div>
+      <div class="panel-card mb-4">
+       <h3>
+        Editar planes de membres&iacute;a
+       </h3>
+       <form class="row g-3" id="planForm">
+        <input id="planOriginalName" type="hidden"/>
+        <div class="col-md-4">
+         <label class="form-label" for="planName">
+          Nombre del plan
+         </label>
+         <input class="form-control" id="planName" maxlength="40" required=""/>
+        </div>
+        <div class="col-md-3">
+         <label class="form-label" for="planPrice">
+          Precio mensual (S/)
+         </label>
+         <input class="form-control" id="planPrice" min="0" required="" step="0.01" type="number"/>
+        </div>
+        <div class="col-md-5">
+         <label class="form-label" for="planDescription">
+          Descripci&oacute;n
+         </label>
+         <input class="form-control" id="planDescription" maxlength="180" required=""/>
+        </div>
+        <div class="col-12">
+         <label class="form-label" for="planBenefits">
+          Beneficios (uno por l&iacute;nea)
+         </label>
+         <textarea class="form-control" id="planBenefits" required="" rows="4"></textarea>
+        </div>
+        <div class="col-12 d-flex flex-wrap gap-2">
+         <button class="btn btn-gold" type="submit">
+          Guardar plan
+         </button>
+         <button class="btn btn-outline-gold" id="resetPlanForm" type="button">
+          Limpiar
+         </button>
+        </div>
+       </form>
+       <div class="table-responsive mt-4">
+        <table class="table align-middle">
+         <thead>
+          <tr>
+           <th>
+            Plan
+           </th>
+           <th>
+            Precio
+           </th>
+           <th>
+            Descripci&oacute;n
+           </th>
+           <th>
+            Acci&oacute;n
+           </th>
+          </tr>
+         </thead>
+         <tbody id="adminPlansTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+      <div class="panel-card">
+       <h3>
+        Editar promociones
+       </h3>
+       <form class="row g-3" id="promotionForm">
+        <input id="promotionId" type="hidden"/>
+        <div class="col-md-4">
+         <label class="form-label" for="promotionTitle">
+          T&iacute;tulo
+         </label>
+         <input class="form-control" id="promotionTitle" maxlength="70" required=""/>
+        </div>
+        <div class="col-md-8">
+         <label class="form-label" for="promotionDescription">
+          Descripci&oacute;n
+         </label>
+         <input class="form-control" id="promotionDescription" maxlength="220" required=""/>
+        </div>
+        <div class="col-md-4">
+         <label class="form-label" for="promotionTag">Etiqueta</label>
+         <input class="form-control" id="promotionTag" maxlength="30" placeholder="BENEFICIO / EXCLUSIVO"/>
+        </div>
+        <div class="col-md-4">
+         <label class="form-label" for="promotionCode">Código promocional</label>
+         <input class="form-control" id="promotionCode" maxlength="24" placeholder="ATLANTIC2026"/>
+        </div>
+        <div class="col-md-4">
+         <label class="form-label" for="promotionUntil">Válido hasta</label>
+         <input class="form-control" id="promotionUntil" type="date"/>
+        </div>
+        <div class="col-12">
+         <label class="form-label" for="promotionConditions">Condiciones y detalles</label>
+         <textarea class="form-control" id="promotionConditions" rows="3" maxlength="500" placeholder="Indica las condiciones, restricciones y cómo acceder al beneficio..."></textarea>
+        </div>
+        <div class="col-12 d-flex flex-wrap gap-2">
+         <button class="btn btn-gold" type="submit">
+          Guardar promoci&oacute;n
+         </button>
+         <button class="btn btn-outline-gold" id="resetPromotionForm" type="button">
+          Limpiar
+         </button>
+        </div>
+       </form>
+       <div class="table-responsive mt-4">
+        <table class="table align-middle">
+         <thead>
+          <tr>
+           <th>
+            Promoci&oacute;n
+           </th>
+           <th>
+            Descripci&oacute;n
+           </th>
+           <th>
+            Etiqueta
+           </th>
+           <th>
+            Acci&oacute;n
+           </th>
+          </tr>
+         </thead>
+         <tbody id="adminPromotionsTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="content-section" id="section-solicitudes">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Solicitudes de clientes
+        </h3>
+        <p>
+         Revisa y actualiza el estado de las solicitudes recibidas.
+        </p>
+       </div>
+      </div>
+      <div class="row g-3 mb-4 request-summary">
+       <div class="col-md-4"><div class="panel-card request-stat"><small>Pendientes</small><strong id="pendingTicketsCount">0</strong><span>Por revisar</span></div></div>
+       <div class="col-md-4"><div class="panel-card request-stat"><small>En revisión</small><strong id="reviewTicketsCount">0</strong><span>En proceso</span></div></div>
+       <div class="col-md-4"><div class="panel-card request-stat"><small>Atendidas</small><strong id="doneTicketsCount">0</strong><span>Resueltas</span></div></div>
+      </div>
+      <div class="panel-card table-responsive requests-table-card">
+       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+        <div><h4 class="mb-1">Bandeja de solicitudes</h4><p class="muted mb-0">Cada solicitud puede revisarse y responderse individualmente.</p></div>
+        <span class="badge rounded-pill text-bg-dark" id="totalTicketsCount">0 solicitudes</span>
+       </div>
+       <table class="table align-middle">
+        <thead>
+         <tr>
+          <th>
+           Cliente
+          </th>
+          <th>
+           Asunto
+          </th>
+          <th>
+           Mensaje
+          </th>
+          <th>
+           Fecha
+          </th>
+          <th>
+           Estado
+          </th>
+          <th>
+           Respuesta
+          </th>
+          <th>
+           Acci&oacute;n
+          </th>
+         </tr>
+        </thead>
+        <tbody id="allTickets">
+        </tbody>
+       </table>
+      </div>
+     </section>
+     <section class="content-section" id="section-reportes">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Reportes y estad&iacute;sticas
+        </h3>
+        <p>
+         Resumen general de la informaci&oacute;n registrada.
+        </p>
+       </div>
+      </div>
+      <div class="row g-3">
+       <div class="col-md-4">
+        <div class="stat-card">
+         <p>
+          Clientes registrados
+         </p>
+         <h3 id="reportClients">
+          0
+         </h3>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="stat-card">
+         <p>
+          Membres&iacute;as activas
+         </p>
+         <h3 id="reportMemberships">
+          0
+         </h3>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="stat-card">
+         <p>
+          Solicitudes recibidas
+         </p>
+         <h3 id="reportTickets">
+          0
+         </h3>
+        </div>
+       </div>
+      </div>
+     <div class="row g-3 mt-2" id="demoMetrics"></div><div class="panel-card mt-3"><h4>Asistencia por actividad cultural</h4><div id="activityMetrics"></div></div></section>
+     <section class="content-section" id="section-auditoria">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Registro de actividad
+        </h3>
+        <p>
+         Consulta las operaciones registradas en el prototipo para dar seguimiento a los movimientos de clientes.
+        </p>
+       </div>
+      </div>
+      <div class="panel-card table-responsive">
+       <table class="table align-middle">
+        <thead>
+         <tr>
+          <th>
+           Fecha
+          </th>
+          <th>
+           Usuario
+          </th>
+          <th>
+           Tipo de movimiento
+          </th>
+          <th>
+           Detalle
+          </th>
+          <th>
+           Estado
+          </th>
+         </tr>
+        </thead>
+        <tbody id="auditTable">
+        </tbody>
+       </table>
+      </div>
+     </section>
+     <section class="content-section" id="section-perfil">
+      <div class="section-heading">
+       <div>
+        <h3>
+         Mi perfil
+        </h3>
+        <p>
+         Actualiza la informaci&oacute;n de tu cuenta.
+        </p>
+       </div>
+      </div>
+      <div class="panel-card profile-card">
+       <form id="profileForm">
+        <div class="mb-3">
+         <label class="form-label" for="profileName">
+          Nombres y apellidos
+         </label>
+         <input class="form-control" id="profileName" required=""/>
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="profileEmail">
+          Correo electr&oacute;nico
+         </label>
+         <input class="form-control" id="profileEmail" required="" type="email"/>
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="profilePasswordCurrent">Contraseña actual (para cambiar la contraseña)</label>
+         <div class="password-field">
+          <input class="form-control" id="profilePasswordCurrent" placeholder="Ingresa tu contraseña actual" type="password" autocomplete="current-password"/>
+          <button class="password-toggle" type="button" data-toggle-password="profilePasswordCurrent" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button>
+         </div>
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="profilePasswordNew">Nueva contraseña</label>
+         <div class="password-field">
+          <input class="form-control" id="profilePasswordNew" minlength="10" placeholder="Mínimo 10 caracteres" type="password" autocomplete="new-password"/>
+          <button class="password-toggle" type="button" data-toggle-password="profilePasswordNew" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button>
+         </div>
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="profilePasswordConfirm">Confirmar nueva contraseña</label>
+         <div class="password-field">
+          <input class="form-control" id="profilePasswordConfirm" minlength="10" placeholder="Repite la nueva contraseña" type="password" autocomplete="new-password"/>
+          <button class="password-toggle" type="button" data-toggle-password="profilePasswordConfirm" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button>
+         </div>
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="profilePhone">
+          Tel&eacute;fono
+         </label>
+         <input class="form-control" id="profilePhone"/>
+        </div>
+        <button class="btn btn-gold" type="submit">
+         Guardar cambios
+        </button>
+       </form>
+      </div>
+     </section>
+     <footer class="page-footer">
+      &copy; 2026 Atlantic City | Sistema de Gesti&oacute;n de Clientes
+     </footer>
+    </div>
+   </main>
+  </div>
+  <div class="toast-message" id="toastMessage" role="status">
+  </div>
+  <div aria-hidden="true" class="modal fade" id="actionModal" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-dark">
+     <div class="modal-header">
+      <h5 class="modal-title" id="modalTitle">
+       Confirmar acci&oacute;n
+      </h5>
+      <button aria-label="Cerrar" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button">
+      </button>
+     </div>
+     <div class="modal-body" id="modalBody">
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-outline-light" data-bs-dismiss="modal" type="button">
+       Volver
+      </button>
+      <button class="btn btn-gold" id="modalConfirm" type="button">
+       Confirmar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/common.js">
+  </script>
+  <script src="js/app.js">
+  </script>
+ <div class="text-center small p-2">Demostración académica de servicios culturales y recreativos ficticios. Sin apuestas, pagos reales ni datos personales reales.</div>
+</body>
+</html>
+
